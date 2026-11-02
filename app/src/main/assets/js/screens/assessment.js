@@ -146,9 +146,10 @@ AQ.screens.assessment = (function () {
     function finalize() {
       var ratio = correct / Math.max(1, used.length);
       var st2 = AQ.store.state;
-      /* نفس سياسة LevelPolicy في أندرويد */
+      /* نفس سياسة LevelPolicy في أندرويد — تقييم كامل بلا خطأ = خبير */
       var lvlKey = "beginner";
-      if (ratio >= 0.9) lvlKey = "advanced";
+      if (ratio >= 1) lvlKey = "expert";
+      else if (ratio >= 0.9) lvlKey = "advanced";
       else if (ratio >= 0.75) lvlKey = "expert";
       else if (ratio >= 0.6) lvlKey = "intermediate";
       else if (ratio >= 0.4) lvlKey = "elementary";

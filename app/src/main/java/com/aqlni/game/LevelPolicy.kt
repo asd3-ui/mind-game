@@ -7,9 +7,9 @@ package com.aqlni.game
  */
 object LevelPolicy {
 
-    enum class Level(val key: String, val emodi: String) {
+    enum class Level(val key: String, val emoji: String) {
         BEGINNER("beginner", "🌱"),
-        ELEMENTARY("elementary", "🌃"),
+        ELEMENTARY("elementary", "🌟"),
         INTERMEDIATE("intermediate", "🚀"),
         ADVANCED("advanced", "🏅"),
         EXPERT("expert", "👑")
@@ -20,7 +20,7 @@ object LevelPolicy {
         if (asked <= 0) return Level.BEGINNER
         val r = ratio.coerceAtLeast(0).toDouble() / asked
         return when {
-            /* ت؂يي؆ قرمئغدار */
+            /* تقييم كامل بلا خطأ يمنح لقب الخبير مباشرة (مطابق لاختبار perfect score) */
             r >= 1.0 -> Level.EXPERT
             r >= 0.90 -> Level.ADVANCED
             r >= 0.75 -> Level.EXPERT
