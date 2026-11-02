@@ -7,6 +7,12 @@ android {
     namespace = "com.aqlni.game"
     compileSdk = 35
 
+    // BuildConfig is referenced by MainActivity (appVersion bridge) and was
+    // disabled by default starting with AGP 8 — re-enable it explicitly.
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "com.aqlni.game"
         minSdk = 26
