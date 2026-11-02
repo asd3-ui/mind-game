@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">عقلني</string>
+
+    <!-- Exit confirmation dialog (used only as a native fallback when the
+         web layer has not finished loading; the normal flow uses the themed
+         in-app dialog). -->
+    <string name="exit_title">الخروج من اللعبة</string>
+    <string name="exit_message">هل تريد الخروج من اللعبة أو مواصلة اللعب؟</string>
+    <string name="exit_button">الخروج من اللعبة</string>
+    <string name="continue_button">متابعة اللعب</string>
+    <string name="tts_missing">خدمة النطق غير متوفرة على هاتفك، سيتم تعطيل الصوت الناطق</string>
+</resources>

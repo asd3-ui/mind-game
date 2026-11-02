@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+**/build/
+app/build/
+captures/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+local.properties
+
+# Secrets — never commit signing credentials
+*.jks
+*.keystore
+!tools/keystore.example.md
+
+# OS files
+.DS_Store
+Thumbs.db
